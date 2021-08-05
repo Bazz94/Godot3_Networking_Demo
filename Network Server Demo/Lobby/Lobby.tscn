@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Lobby/Lobby.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=2]
+
+[node name="Lobby" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer"]
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 1280, 720 )
+color = Color( 0, 0, 0, 0.803922 )
+
+[node name="HSplitContainer" type="HBoxContainer" parent="CenterContainer"]
+margin_left = 481.0
+margin_top = 285.0
+margin_right = 798.0
+margin_bottom = 435.0
+custom_constants/separation = 17
+
+[node name="GridContainer2" type="GridContainer" parent="CenterContainer/HSplitContainer"]
+margin_right = 300.0
+margin_bottom = 150.0
+
+[node name="Label" type="Label" parent="CenterContainer/HSplitContainer/GridContainer2"]
+margin_right = 300.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 300, 50 )
+custom_fonts/font = ExtResource( 2 )
+text = "Lobby"
+align = 1
+valign = 1
+
+[node name="Host" type="Button" parent="CenterContainer/HSplitContainer/GridContainer2"]
+margin_top = 54.0
+margin_right = 300.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 300, 50 )
+custom_fonts/font = ExtResource( 2 )
+text = "Host"
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/HSplitContainer"]
+margin_left = 317.0
+margin_right = 317.0
+margin_bottom = 150.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/vseparation = 30
+
+[node name="HSplitContainer" type="VBoxContainer" parent="CenterContainer/HSplitContainer/GridContainer"]
+margin_bottom = 150.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 0, 150 )
+size_flags_horizontal = 4
+custom_constants/separation = 10
+alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+scale = Vector2( -1.07007e+06, 1.22587e+10 )
+anchor_mode = 0
+current = true
+[connection signal="pressed" from="CenterContainer/HSplitContainer/GridContainer2/Host" to="." method="_on_Host_pressed"]
