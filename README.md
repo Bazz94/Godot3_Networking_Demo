@@ -9,5 +9,8 @@ Code reviews and corrections are welcome.
 Here is a link to the Godot Multiplayer Documentation:
 https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html
 
+If you do not know what Godot is, here is a link: 
+https://godotengine.org/
+
 Screenshot of P2P client:
 ![NetClient_screenshot](https://user-images.githubusercontent.com/88403974/128414790-bf12055e-d403-4601-871d-d320d517c1aa.png)
