@@ -1,10 +1,9 @@
 extends Node
 
 const DEFAULT_PORT = 31400
-const MAX_PLAYERS = 5
+const MAX_PLAYERS = 3
 
 var my_id
-var Server_IP = '127.0.0.1'
 var players = { }
 var self_data = { name = '', position = Vector2(640,320), colour = Color(0, 0, 0) }
 var connection_failed = false
